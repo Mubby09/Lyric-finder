@@ -55,7 +55,6 @@ function showDataInDom(data) {
   } else {
     more.innerHTML = "";
   }
-  //   check(data);
 }
 
 // get more songs: prev/next
@@ -80,7 +79,8 @@ async function getLyrics(artist, songTitle) {
   const data = await res.json();
   const lyrics = data.lyrics.replace(/(\r\n|\r|\n)/g, "<br>");
 
-  result.innerHTML = `<h2><strong>${artist}</strong><h2> 
+  result.innerHTML = `
+  <h2><strong>${artist}</strong><h2> 
     <h2> ${songTitle} </h2>
     <span>${lyrics}</span>
     `;
